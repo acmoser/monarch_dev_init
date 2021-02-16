@@ -6,28 +6,18 @@
 
 function intro_message_func {
 echo "Monarch Development Environment Initialization script"
-echo "0.0 Feb 14, 2021"
+echo "0.1 Feb 16, 2021"
 read -rsn1 -p "Press any key to continue..."; echo
 }
 
 function install_explain-func {
 clear;
 echo "COMPONENTS TO INSTALL:"
-echo "git"
 echo "arduino-cli"
-echo "-duevga library"
 echo "icestorm-template"
 echo "rv32i-gcc"
 echo "tinyprog"
-echo "Athena system repository"
 echo "-"
-read -rsn1 -p "Press any key to continue..."; echo
-}
-
-function git_install-func {
-clear;
-sudo apt-get install git-all
-echo "'git' installation complete"
 read -rsn1 -p "Press any key to continue..."; echo
 }
 
@@ -109,8 +99,6 @@ read -rsn1 -p "Press any key to continue..."; echo
 #MAIN PROGRAM BODY
 intro_message_func
 install_explain-func
-git_install-func
 arduino_install-func
-duevga_install-func
 icestorm-template_install-func
 rv32i-gcc_install-func
